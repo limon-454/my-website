@@ -3,65 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My E-Commerce Website</title>
+    <title>গেমিং ওয়েবসাইট</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Store</h1>
+        <h1>গেমিং ওয়েবসাইট</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">হোম</a></li>
+                <li><a href="#">গেমস</a></li>
+                <li><a href="#">লিডারবোর্ড</a></li>
+                <li><a href="#">যোগাযোগ</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to our online store! Explore our products and find the best deals.</p>
-    </section>
-
-    <section id="products">
-        <h2>Products</h2>
-        <div class="product">
-            <img src="images/1skosr.jpg" alt="Product 1">
-            <h3>Product 1</h3>
-            <p>Price: $10</p>
-            <button>Add to Cart</button>
+    <section class="games">
+        <h2>গেমস</h2>
+        <div class="game-list">
+            <div class="game">
+                <h3>স্নেক গেম</h3>
+                <p>ক্লাসিক স্নেক গেম খেলুন!</p>
+                <a href="snake.html" class="play-button">খেলুন</a>
+            </div>
+            <div class="game">
+                <h3>টিক ট্যাক টো</h3>
+                <p>টিক ট্যাক টো গেম খেলুন!</p>
+                <a href="tictactoe.html" class="play-button">খেলুন</a>
+            </div>
         </div>
-        <div class="product">
-            <img src="images/product2.jpg" alt="Product 2">
-            <h3>Product 2</h3>
-            <p>Price: $20</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="images/product3.jpg" alt="Product 3">
-            <h3>Product 3</h3>
-            <p>Price: $30</p>
-            <button>Add to Cart</button>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 My E-Commerce Store. All rights reserved.</p>
+        <p>&copy; ২০২৫ গেমিং ওয়েবসাইট। সর্বস্বত্ব সংরক্ষিত।</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

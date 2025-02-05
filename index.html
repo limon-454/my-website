@@ -3,44 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>খবর ও ফাইল শেয়ারিং ওয়েবসাইট</title>
+  <title>খবর ওয়েবসাইট</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       text-align: center;
     }
-    form {
+    .content {
       margin: 20px;
       padding: 20px;
       background: #fff;
-      display: inline-block;
-      border-radius: 5px;
+      border-radius: 8px;
+    }
+    .ads {
+      margin: 20px;
+      padding: 10px;
+      background-color: #ddd;
     }
   </style>
 </head>
 <body>
-  <h1>খবর পোস্ট ও ফাইল আপলোড</h1>
-  
-  <!-- খবর পোস্ট ফর্ম -->
-  <h2>খবর লিখুন</h2>
-  <form action="" method="POST">
-    <textarea name="news" rows="4" cols="50" placeholder="আপনার খবর লিখুন"></textarea><br><br>
-    <button type="submit">পোস্ট করুন</button>
-  </form>
+  <h1>খবর ও ব্লগ পোস্ট</h1>
 
-  <!-- ফাইল আপলোড ফর্ম -->
-  <h2>ফাইল আপলোড করুন</h2>
-  <form action="upload.php" method="POST" enctype="multipart/form-data">
-    <input type="file" name="file"><br><br>
-    <button type="submit">আপলোড করুন</button>
-  </form>
+  <!-- বিজ্ঞাপন ১ (হেডারের নিচে) -->
+  <div class="ads">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
 
-  <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['news'])) {
-      echo "<h3>আপনার খবর:</h3>";
-      echo "<p>" . htmlspecialchars($_POST['news']) . "</p>";
-    }
-  ?>
+  <div class="content">
+    <h2>আজকের খবর</h2>
+    <p>বাংলাদেশের সর্বশেষ খবর এখানে পড়ুন।</p>
+  </div>
+
+  <!-- বিজ্ঞাপন ২ (কন্টেন্টের নিচে) -->
+  <div class="ads">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
 </body>
 </html>

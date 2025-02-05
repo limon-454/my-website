@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>গেমিং ওয়েবসাইট</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>খবর ও ফাইল শেয়ারিং ওয়েবসাইট</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    form {
+      margin: 20px;
+      padding: 20px;
+      background: #fff;
+      display: inline-block;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>গেমিং ওয়েবসাইট</h1>
-        <nav>
-            <ul>
-                <li><a href="#">হোম</a></li>
-                <li><a href="#">গেমস</a></li>
-                <li><a href="#">লিডারবোর্ড</a></li>
-                <li><a href="#">যোগাযোগ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <h1>খবর পোস্ট ও ফাইল আপলোড</h1>
+  
+  <!-- খবর পোস্ট ফর্ম -->
+  <h2>খবর লিখুন</h2>
+  <form action="" method="POST">
+    <textarea name="news" rows="4" cols="50" placeholder="আপনার খবর লিখুন"></textarea><br><br>
+    <button type="submit">পোস্ট করুন</button>
+  </form>
 
-    <section class="games">
-        <h2>গেমস</h2>
-        <div class="game-list">
-            <div class="game">
-                <h3>স্নেক গেম</h3>
-                <p>ক্লাসিক স্নেক গেম খেলুন!</p>
-                <a href="snake.html" class="play-button">খেলুন</a>
-            </div>
-            <div class="game">
-                <h3>টিক ট্যাক টো</h3>
-                <p>টিক ট্যাক টো গেম খেলুন!</p>
-                <a href="tictactoe.html" class="play-button">খেলুন</a>
-            </div>
-        </div>
-    </section>
+  <!-- ফাইল আপলোড ফর্ম -->
+  <h2>ফাইল আপলোড করুন</h2>
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file"><br><br>
+    <button type="submit">আপলোড করুন</button>
+  </form>
 
-    <footer>
-        <p>&copy; ২০২৫ গেমিং ওয়েবসাইট। সর্বস্বত্ব সংরক্ষিত।</p>
-    </footer>
+  <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['news'])) {
+      echo "<h3>আপনার খবর:</h3>";
+      echo "<p>" . htmlspecialchars($_POST['news']) . "</p>";
+    }
+  ?>
 </body>
 </html>

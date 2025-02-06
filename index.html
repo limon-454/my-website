@@ -16,58 +16,109 @@
     </div>
 </div>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stylish Vertical Button</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #f6d365, #fda085);
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World's Wealthiest People</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    .button-container {
-      background-color: #ff7e5f;
-      color: white;
-      width: 300px;
-      padding: 40px;
-      text-align: center;
-      border-radius: 20px;
-      font-size: 20px;
-      font-weight: bold;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
 
-    .button-container:hover {
-      background-color: #feb47b;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-      transform: translateY(-5px);
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .button-text {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #ffffff;
-    }
-  </style>
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        .person-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .person-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .person-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 30px;
+            object-fit: cover;
+        }
+
+        .person-info h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .person-info p {
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .net-worth {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .person-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .person-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>World's Wealthiest Individuals 2023</h1>
 
-  <a href="https://www.facebook.com/p.c.l.o.814905" class="button-container" target="_blank">
-    আমার ওয়েবসাইটে যান
-    <div class="button-text">আরো বিস্তারিত জানুন!</div>
-  </a>
+        <div class="person-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg" alt="Elon Musk" class="person-image">
+            <div class="person-info">
+                <h2>Elon Musk</h2>
+                <p class="net-worth">Net Worth: $232 billion</p>
+                <p>Source of Wealth: Tesla, SpaceX, X</p>
+                <p>Country: United States</p>
+                <p>Age: 52</p>
+            </div>
+        </div>
 
-</body>
-</html>
+        <div class="person-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg" alt="Jeff Bezos" class="person-image">
+            <div class="person-info">
+                <h2>Jeff Bezos</h2>
+                <p class="net-worth">Net Worth: $177 billion</p>
+                <p>Source of Wealth: Amazon</p>
+                <p>Country: United States</p>
+                <p>Age:
